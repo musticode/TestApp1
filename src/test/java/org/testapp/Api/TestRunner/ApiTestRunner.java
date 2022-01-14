@@ -1,0 +1,18 @@
+package org.testapp.Api.TestRunner;
+
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+import org.testng.annotations.DataProvider;
+
+@CucumberOptions(
+        features = {"src/test/java/org/testapp/Api/Features"},
+        glue = {"org.testapp.Api.StepDefinitions"},
+        tags = "@api"
+)
+public class ApiTestRunner extends AbstractTestNGCucumberTests {
+    @Override
+    @DataProvider(parallel = true)
+    public Object[][] scenarios() {
+        return super.scenarios();
+    }
+}
