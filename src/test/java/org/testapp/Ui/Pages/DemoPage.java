@@ -2,6 +2,7 @@ package org.testapp.Ui.Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 public class DemoPage extends BasePage{
     private String DEMO_PAGE_URL = "https://demoqa.com/automation-practice-form";
@@ -16,6 +17,11 @@ public class DemoPage extends BasePage{
     }
     public void setName(String name){
         setText(nameLocator, name);
+    }
+    public void isPageOpened(){
+        openPage();
+        String title = driver.getTitle();
+        Assert.assertEquals(title, "ToolsQE", "Page isn't opened");
     }
 
 
