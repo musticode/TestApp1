@@ -27,6 +27,7 @@ public class BasePage {
         findBy(locator).sendKeys(text);
     }
     public String getText(By locator){
+        waitForLocator(locator);
         return findBy(locator).getText();
     }
 }

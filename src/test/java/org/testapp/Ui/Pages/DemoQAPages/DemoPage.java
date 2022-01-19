@@ -1,10 +1,11 @@
-package org.testapp.Ui.Pages;
+package org.testapp.Ui.Pages.DemoQAPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testapp.Ui.Pages.BasePage;
 import org.testng.Assert;
 
-public class DemoPage extends BasePage{
+public class DemoPage extends BasePage {
     private String DEMO_PAGE_URL = "https://demoqa.com/automation-practice-form";
     private By nameLocator = By.xpath("//*[@id=\"firstName\"]");
 
