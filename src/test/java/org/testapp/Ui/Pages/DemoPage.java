@@ -21,7 +21,7 @@ public class DemoPage extends BasePage{
     public void isPageOpened(){
         openPage();
         String title = driver.getTitle();
-        Assert.assertEquals(title, "ToolsQE", "Page isn't opened");
+        Assert.assertEquals(title, "ToolsQA", "Page isn't opened");
     }
 
 

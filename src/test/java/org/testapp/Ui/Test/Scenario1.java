@@ -2,6 +2,7 @@ package org.testapp.Ui.Test;
 
 import org.testapp.Ui.Listener.TestListener;
 import org.testapp.Ui.Pages.DemoPage;
+import org.testapp.Ui.Pages.Faveo.DashboardPage;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 @Listeners(TestListener.class)
@@ -15,5 +16,15 @@ public class Scenario1 extends BaseTest{
         demoPage.setName("Mustafa");
     }
 
+/*    String email= "testemail@yopmail.com";
+
+
+    DashboardPage dashboardPage;
+    @Test
+    public void createTestTicket(){
+        dashboardPage = new DashboardPage(driver);
+        dashboardPage.getFaveoDashboard();
+        dashboardPage.createTicket().fillTicketCreateForm(email);
+    }*/
 
 }

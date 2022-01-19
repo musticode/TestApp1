@@ -6,9 +6,8 @@
     </listeners>
     <test name="Test Suites">
         <classes>
-<!--            <class name="org.testapp.Api.TestRunner.ApiTestRunner"></class>
-            <class name="org.testapp.Ui.TestRunner.UiTestRunner"></class>-->
             <class name="org.testapp.Ui.Test.Scenario1"></class>
+            <class name="org.testapp.Api.RestClient.ApiTest"></class>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
