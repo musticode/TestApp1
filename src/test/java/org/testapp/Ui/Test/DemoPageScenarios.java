@@ -4,6 +4,7 @@ import io.qameta.allure.Description;
 import org.testapp.Ui.Listener.TestListener;
 import org.testapp.Ui.Pages.DemoQAPages.DemoPageRadio;
 import org.testapp.Ui.Pages.DemoQAPages.DemoPageTextBox;
+import org.testapp.Ui.Pages.DemoQAPages.DemoPageWebTables;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -57,6 +58,18 @@ public class DemoPageScenarios extends BaseTest{
         Assert.assertEquals(demoPageRadio.getClickedRadioButton(),
                 "You have selected Impressive",
                 "Yes Radio button is not selected");
+    }
+
+    DemoPageWebTables demoPageWebTables;
+    @Test
+    public void demoPageWebTablesTest1(){
+        demoPageWebTables = new DemoPageWebTables(driver);
+        demoPageWebTables
+                .getWebTablesRegistrationForm()
+                .fillRegistrationForm(FULL_NAME,"Karatas", EMAIL, "13","123","eng");
+        System.out.println(demoPageWebTables.getTableText());
+
+
     }
 
 
